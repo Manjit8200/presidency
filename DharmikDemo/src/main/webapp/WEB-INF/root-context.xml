@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id="springDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" >
+
+	
+		<!--    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://ultrasmartsolutions.com/iltruasa_pcebseuncyidl" />  
+		<property name="username" value="iltruasa_prvudelbsidcencybo" />
+		<property name="password" value="zG6*-glHDI}0" />   -->
+		
+
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/presidencyclub"/>
+		<property name="username" value="root" />
+		<property name="password" value="" />
+		
+		<property name="maxIdle" value="100"/>
+		<property name="minIdle" value="10"/>
+   		<property name="validationQuery" value="select curdate()"/>
+   		<property name="removeAbandoned" value="true"/>
+   		<property name="initialSize" value="20" />
+   		<property name="maxActive" value="30" />		
+   		
+
+ 	</bean>
+		<bean id="loginImpl" class="com.ui.dao.impl.LoginDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+
+	<bean id="MasterPlanDao" class="com.ui.dao.impl.MasterMemberPlanDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>	 
+	<bean id="MasterMemberRegisterDao" class="com.ui.dao.impl.MasterMemberRegisterDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>	 
+	 <bean id="MemberFamilyRegisterDao" class="com.ui.dao.impl.MemberFamilyRegisterDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>	 
+	 <bean id="MemberNomineeDetailsDao" class="com.ui.dao.impl.MemberNomineeDetailsDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>	
+	 <bean id="MemberPersonalInformationDao" class="com.ui.dao.impl.MemberPersonalInformationDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	 <bean id="LocationDao" class="com.ui.dao.impl.LocationDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+<bean id="CategoryDao" class="com.ui.dao.impl.CategoryDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	<bean id="SubCategoryDao" class="com.ui.dao.impl.SubCategoryDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	<bean id="TypeDao" class="com.ui.dao.impl.TypeDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	<bean id="ProductDao" class="com.ui.dao.impl.ProductDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	
+	
+	<bean id="MemberPaymentDao" class="com.ui.dao.impl.MemberPaymentDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	
+	<bean id="TaxTypeDao" class="com.ui.dao.impl.TaxTypeDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	
+	<bean id="MasterChoiceDao" class="com.ui.dao.impl.MasterChoiceDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	
+	<bean id="MasterClubNameDao" class="com.ui.dao.impl.MasterClubNameDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+<bean id="BillingGroupDao" class="com.ui.dao.impl.BillingGroupDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+	
+	<bean id="StafUserDao" class="com.ui.dao.impl.StafUserDAOImpl">
+		<property name="dataSource" ref="springDataSource"></property> 
+	</bean>
+
+		
+</beans>

@@ -1,0 +1,35 @@
+.loginbx
+{
+	background-color: #a0a0a0;
+	margin:2.7% auto;
+	display: inline-block;
+	height:100%;
+	padding:20px 20px 20px 20px;
+	border-radius: 5%;
+}
+.signbx
+{
+	background-color: #d0d0d0;
+	margin:2.7% auto;
+	display: inline-block;
+	height:100%;
+	padding:20px 20px 20px 20px;
+	border-radius: 5%;
+}
+.imgbx
+{
+	display: inline-block;
+	border-radius: 50%;
+	height:50%;
+	width:50%;
+	margin:0% 10% 0% 25%;
+}
+label
+{
+	color:white;
+}
+.errorbox{
+	"width": "100%";
+    "padding":"2px";
+    "border-width":"10px";
+}
